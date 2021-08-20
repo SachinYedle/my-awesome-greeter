@@ -1,1 +1,4 @@
-export const Geeter = (name: string) => `Hello ${name}`;
+export const Geeter = (env: string) => {
+  const config = require(`../lib/${env}.yaml`);
+  return config;
+};
